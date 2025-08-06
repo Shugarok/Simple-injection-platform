@@ -1,6 +1,6 @@
 #include "main.h"
 
-wchar_t dllPath[] = L"C:\\prog\\C++\\learn\\1\\1\\Injector.dll";
+wchar_t dllPath[] = L"";
 unsigned int dllSiz = static_cast<unsigned int>((wcslen(dllPath) + 1) * sizeof(wchar_t));
 
 
