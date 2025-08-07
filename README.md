@@ -1,7 +1,7 @@
-# Undetectable Injector Platform
+# Undetectable Injection Platform
 
 ## Description
-**Undetectable Injector Platform** — This is a project aimed at creating an injection platform that is not detected by antiviruses and anti-cheats. At the current stage, the basic injection functionality has been implemented. In the future, it is planned to add anti-detection mechanisms to increase stealth.
+**Undetectable Injection Platform** — This is a project aimed at creating an injection platform that is not detected by antiviruses and anti-cheats. At the current stage, the basic injection functionality has been implemented. In the future, it is planned to add anti-detection mechanisms to increase stealth.
 
 ## Features
 - Injecting DLLs into target processes.
