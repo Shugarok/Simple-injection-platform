@@ -137,12 +137,6 @@ int ntCTEFall(HANDLE hProcess, LPVOID pRemoteMemory, bool ntSuccess, HANDLE hThr
 
 
 
-
-
-
-
-
-
 int closeALL(HANDLE hProcess, LPVOID pRemoteMemory, HANDLE hThread) {
     CloseHandle(hThread);
     VirtualFreeEx(hProcess, pRemoteMemory, 0, MEM_RELEASE);
@@ -150,11 +144,6 @@ int closeALL(HANDLE hProcess, LPVOID pRemoteMemory, HANDLE hThread) {
     std::cin.get();
     return 0;
 }
-<<<<<<< HEAD
-=======
-
-
-
 
 
 
@@ -164,4 +153,4 @@ int injectorMain(int pid) {
 
 
 }
->>>>>>> 0e32361 (+better logs +NtCreateThreadEx with fallback)
+
