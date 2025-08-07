@@ -5,14 +5,14 @@ int main()
 {
     
     int pid = findProcID(L"notepad.exe");
-    if (pid == -1 && debuggingMode == true) {
-        std::cerr << "\033[31m"<< currentTime() << "[ERROR] Can't find the process, exiting \033[0m" << std::endl;
+    if (pid == -1) {
+        log(logLevel::ERRORR, injectionStage::FIND_PID, " Can't find the process, exiting");
         std::cin.get();
         return -1;
     }
-    else if(debuggingMode == true)
-        std::cerr << "\033[34m" << currentTime() << "[INFO] PID = "<< pid << "\033[0m" << std::endl;
-
+    else 
+        log(logLevel::INFO, injectionStage::FIND_PID, " PID = " + std::to_string(pid));
+        
 
     injectorMain(pid);
 

@@ -12,7 +12,7 @@ int findProcID(const wchar_t* procName) {
 
 
 	snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
-	if (snapshot == INVALID_HANDLE_VALUE) return 1;
+	if (snapshot == INVALID_HANDLE_VALUE) return -1;
 
 
 	Process32First(snapshot, &pe);
@@ -38,3 +38,4 @@ int findProcID(const wchar_t* procName) {
 	CloseHandle(snapshot);
 	return procID;
 }
+
