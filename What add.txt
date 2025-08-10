@@ -2,12 +2,11 @@
 // Reduce the number of if's in injector.cpp +
 // More logs +
 //Anti sandbox + (will improve in the future)
-
+//Anti debug + (will improve in the future)
 
 
 //Syscall NtCreateThreadEx 
 //Check DLL
-//Anti debug
 //Remove signatures from code:
 	Do not write the string "CreateRemoteThread" or "LoadLibrary" in raw form - the antivirus can search for these strings.
 	Use xor encryption or decrypt them in runtime.
