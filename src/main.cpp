@@ -7,7 +7,8 @@ int main()
     log(logLevel::INFO, injectionStage::ANTI_VM_FINISH, "No VM detected, continue...");
     mainAntiDebug();
     log(logLevel::INFO, injectionStage::ANTI_DEBUG, "No debugger detected, continue...");
-    int pid = findProcID(L"notepad.exe");
+    //Process name with .exe(example: notepad.exe)
+    int pid = findProcID(L"");
     if (pid == -1) {
         log(logLevel::ERRORR, injectionStage::FIND_PID, "Can't find the process, exiting");
         std::cin.get();
