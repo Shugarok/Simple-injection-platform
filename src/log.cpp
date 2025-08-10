@@ -1,9 +1,13 @@
 #include "main.h"
-#include <iostream>
+
 
 const char* to_string(injectionStage stage) {
     switch (stage) {
     case injectionStage::INIT: return "INIT";
+    case injectionStage::ANTI_VM: return "ANTI_VM";
+    case injectionStage::ANTI_VM_FINISH: return "ANTI_VM_FINISH";
+    case injectionStage::ANTI_DEBUG: return "ANTI_DEBUG";
+    case injectionStage::ANTI_DEBUG_FINISH: return "ANTI_DEBUG_FINISH";
     case injectionStage::FIND_PID: return "FIND_PID";
     case injectionStage::LOAD_LIBRARY_ADDR: return "LOAD_LIBRARY_ADDR";
     case injectionStage::OPEN_PROCESS: return "OPEN_PROCESS";

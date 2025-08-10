@@ -3,15 +3,18 @@
 
 int main()
 {
-    
+    AntiVMMain();
+    log(logLevel::INFO, injectionStage::ANTI_VM_FINISH, "No VM detected, continue...");
+    mainAntiDebug();
+    log(logLevel::INFO, injectionStage::ANTI_DEBUG, "No debugger detected, continue...");
     int pid = findProcID(L"notepad.exe");
     if (pid == -1) {
-        log(logLevel::ERRORR, injectionStage::FIND_PID, " Can't find the process, exiting");
+        log(logLevel::ERRORR, injectionStage::FIND_PID, "Can't find the process, exiting");
         std::cin.get();
         return -1;
     }
     else 
-        log(logLevel::INFO, injectionStage::FIND_PID, " PID = " + std::to_string(pid));
+        log(logLevel::INFO, injectionStage::FIND_PID, "PID = " + std::to_string(pid));
         
 
     injectorMain(pid);
